@@ -47,11 +47,10 @@ public class ClienteSetDAO implements IClienteDAO {
             for (Cliente clienteCadastrado : this.set) {
                 if (clienteCadastrado.equals(cliente)) {
                     clienteCadastrado.setNome(cliente.getNome());
+                    clienteCadastrado.setCpf(cliente.getCpf());
                     clienteCadastrado.setTel(cliente.getTel());
-                    clienteCadastrado.setNumero(cliente.getNumero());
-                    clienteCadastrado.setEnd(cliente.getEnd());
-                    clienteCadastrado.setCidade(cliente.getCidade());
-                    clienteCadastrado.setEstado(cliente.getEstado());
+                    clienteCadastrado.setEmail(cliente.getEmail());
+                    clienteCadastrado.setSenha(cliente.getSenha());
                     break;
                 }
             }
@@ -69,3 +68,4 @@ public class ClienteSetDAO implements IClienteDAO {
     }
     
 }
+

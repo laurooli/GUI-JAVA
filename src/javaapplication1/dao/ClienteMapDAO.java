@@ -36,18 +36,21 @@ public class ClienteMapDAO implements IClienteDAO {
     @Override
     public void excluir(Long cpf) {
         Cliente clienteCadastrado = map.get(cpf);
-        map.remove(clienteCadastrado.getCpf(), clienteCadastrado);
+        if (clienteCadastrado != null) {
+            map.remove(clienteCadastrado.getCpf());
+        }
     }
 
     @Override
     public void alterar(Cliente cliente) {
         Cliente clienteCadastrado = map.get(cliente.getCpf());
-        clienteCadastrado.setNome(cliente.getNome());
-        clienteCadastrado.setTel(cliente.getTel());
-        clienteCadastrado.setNumero(cliente.getNumero());
-        clienteCadastrado.setEnd(cliente.getEnd());
-        clienteCadastrado.setCidade(cliente.getCidade());
-        clienteCadastrado.setEstado(cliente.getEstado());
+        if (clienteCadastrado != null) {
+            clienteCadastrado.setNome(cliente.getNome());
+            clienteCadastrado.setCpf(cliente.getCpf());
+            clienteCadastrado.setTel(cliente.getTel());
+            clienteCadastrado.setEmail(cliente.getEmail());
+            clienteCadastrado.setSenha(cliente.getSenha());
+        }
     }
 
     @Override
@@ -56,3 +59,4 @@ public class ClienteMapDAO implements IClienteDAO {
     }
     
 }
+

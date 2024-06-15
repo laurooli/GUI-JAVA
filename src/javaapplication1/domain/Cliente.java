@@ -16,20 +16,15 @@ public class Cliente {
     private String nome;
     private Long cpf;
     private Long tel;
-    private String end;
-    private Integer numero;
-    private String cidade;
-    private String estado;
+    private String email;
+    private Integer senha;
 
-    public Cliente(String nome, String cpf, String tel, String end, String num, String cidade, String estado) {
+    public Cliente(String nome, String cpf, String tel, String email, String senha) {
         this.nome = nome;
         this.cpf = Long.valueOf(cpf);
         this.tel = Long.valueOf(tel);
-        this.end = end;
-        this.numero = Integer.valueOf(num);
-        this.cidade = cidade;
-        this.estado = estado;
-        
+        this.email = email;
+        this.senha = Integer.valueOf(senha);
     }
 
     public String getNome() {
@@ -56,38 +51,22 @@ public class Cliente {
         this.tel = tel;
     }
 
-    public String getEnd() {
-        return end;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEnd(String end) {
-        this.end = end;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public Integer getNumero() {
-        return numero;
+    public Integer getSenha() {
+        return senha;
     }
 
-    public void setNumero(Integer numero) {
-        this.numero = numero;
+    public void setSenha(Integer senha) {
+        this.senha = senha;
     }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
+    
     @Override
     public int hashCode() {
         int hash = 7;
