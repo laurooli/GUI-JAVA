@@ -17,14 +17,14 @@ public class Cliente {
     private Long cpf;
     private Long tel;
     private String email;
-    private Integer senha;
+    private String senha;
 
     public Cliente(String nome, String cpf, String tel, String email, String senha) {
         this.nome = nome;
         this.cpf = Long.valueOf(cpf);
         this.tel = Long.valueOf(tel);
         this.email = email;
-        this.senha = Integer.valueOf(senha);
+        this.senha = senha;
     }
 
     public String getNome() {
@@ -59,11 +59,11 @@ public class Cliente {
         this.email = email;
     }
 
-    public Integer getSenha() {
+    public String getSenha() {
         return senha;
     }
 
-    public void setSenha(Integer senha) {
+    public void setSenha(String senha) {
         this.senha = senha;
     }
     

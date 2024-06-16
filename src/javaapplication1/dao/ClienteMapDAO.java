@@ -56,7 +56,16 @@ public class ClienteMapDAO implements IClienteDAO {
     @Override
     public Cliente consultar(Long cpf) {
         return this.map.get(cpf);
-    }
+    } 
     
+    public boolean autenticar(String email, String senha) {
+        for (Cliente cliente : map.values()) {
+            if (cliente.getEmail().equals(email) && cliente.getSenha().equals(senha)) {
+                return true;
+            }
+        }
+        return false;
+    }
+        
 }
 

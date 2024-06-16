@@ -16,7 +16,7 @@ public class JavaApplication1 {
      */
     public static void main(String[] args) {
        //PrincipalJFrame frame = new PrincipalJFrame();
-       Erro frame = new Erro();
+       TelaCadastro frame = new TelaCadastro();
        frame.setVisible(true);
     }
 }
